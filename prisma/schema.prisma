@@ -28,18 +28,18 @@ model Category {
   name        String
   imageUrl    String
   restaurants Restaurant[]
-  products     Product[]
+  products    Product[]
 }
 
 model Product {
-  id                String     @id @default(uuid())
-  name              String
-  description       String
-  imageUrl          String
-  price             Decimal    @db.Decimal(10, 2)
-  dicountPercentage Int        @default(0)
-  restauranteId     String
-  restaurant        Restaurant @relation(fields: [restauranteId], references: [id])
-  categoryId        String
-  category          Category   @relation(fields: [categoryId], references: [id])
+  id                 String     @id @default(uuid())
+  name               String
+  description        String
+  imageUrl           String
+  price              Decimal    @db.Decimal(10, 2)
+  discountPercentage Int        @default(0)
+  restauranteId      String
+  restaurant         Restaurant @relation(fields: [restauranteId], references: [id])
+  categoryId         String
+  category           Category   @relation(fields: [categoryId], references: [id])
 }
