@@ -38,8 +38,8 @@ const Home = async () => {
         alt="Até 30% de desconto em pizzas"
       />
 
-      <div className="space-y-4 pt-6">
-        <div className="flex items-center justify-between px-5">
+      <div className="space-y-4 px-5 pt-6">
+        <div className="flex items-center justify-between ">
           <h2 className="font-semibold">Pedidos Recomendados</h2>
 
           <Button
@@ -58,7 +58,7 @@ const Home = async () => {
         alt="A partir de R$17,99 em lanches"
       />
 
-      <div className="space-y-4 py-6">
+      <div className="space-y-4 py-6 ">
         <div className="flex items-center justify-between px-5">
           <h2 className="font-semibold">Restaurantes Recomendados</h2>
 

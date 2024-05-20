@@ -1,5 +1,5 @@
 import { db } from "@/app/_lib/prisma";
-import ProductsImage from "./_components/produtsImage";
+import ProductImage from "./_components/produtImage";
 import ProductDetails from "./_components/productDetails";
 import { Button } from "@/app/_components/ui/button";
 
@@ -41,7 +41,7 @@ const ProductPage = async ({ params: { id } }: ProductPageProps) => {
 
   return (
     <div className="relative pb-12">
-      <ProductsImage product={product} />
+      <ProductImage product={product} />
 
       <ProductDetails product={product} complementaryProducts={juices} />
 

@@ -8,15 +8,10 @@ import {
 import DiscountBadge from "@/app/_components/discountBadge";
 import { Prisma } from "@prisma/client";
 import { Button } from "@/app/_components/ui/button";
-import {
-  BikeIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  TimerIcon,
-} from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { useState } from "react";
-import { Card } from "@/app/_components/ui/card";
 import ProductsList from "@/app/_components/productsList";
+import DeliveryInfo from "@/app/_components/deliveryInfo";
 
 interface ProductDetailsProps {
   product: Prisma.ProductGetPayload<{
@@ -101,37 +96,7 @@ const ProductDetails = ({
       {/* Dados da Entrega */}
 
       <div className="px-5">
-        <Card className="mt-6 flex justify-around py-4">
-          {/* Custo */}
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <span className="text-xs">Entrega</span>
-              <BikeIcon size={14} />
-            </div>
-
-            {Number(product.restaurant.deliveryFee) > 0 ? (
-              <p className="text-sm font-semibold">
-                {formatCurrency(Number(product.restaurant.deliveryFee))}
-              </p>
-            ) : (
-              <p className="text-sm font-semibold">Grátis</p>
-            )}
-          </div>
-
-          {/* Tempo */}
-          <div>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <span className="text-xs">Tempo</span>
-                <TimerIcon size={14} />
-              </div>
-
-              <p className="text-sm font-semibold">
-                {product.restaurant.deliveryTimeMinutes} min
-              </p>
-            </div>
-          </div>
-        </Card>
+        <DeliveryInfo restaurant={product.restaurant} />
       </div>
 
       {/* Descrição */}

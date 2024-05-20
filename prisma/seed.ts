@@ -76,7 +76,7 @@ const createBurguers = async (
     await createDeserts(restaurant.id, desertsCategoryId);
     await createJuices(restaurant.id, juicesCategoryId);
 
-    console.log(`Created ${restaurant.name}`);
+    // console.log(`Created ${restaurant.name}`);
 
     const burguerProducts = [
       {
@@ -194,7 +194,7 @@ const createBurguers = async (
         data: product,
       });
 
-      console.log(`Created ${product.name}`);
+      // console.log(`Created ${product.name}`);
     }
   }
 };
@@ -270,7 +270,7 @@ const createPizzas = async (
     await createDeserts(restaurant.id, desertsCategoryId);
     await createJuices(restaurant.id, juicesCategoryId);
 
-    console.log(`Created ${restaurant.name}`);
+    // console.log(`Created ${restaurant.name}`);
 
     const pizzaProducts = [
       {
@@ -370,7 +370,7 @@ const createPizzas = async (
         data: product,
       });
 
-      console.log(`Created ${product.name}`);
+      // console.log(`Created ${product.name}`);
     }
   }
 };
@@ -443,7 +443,7 @@ const createJapanese = async (
       data: item,
     });
 
-    console.log(`Created ${restaurant.name}`);
+    // console.log(`Created ${restaurant.name}`);
 
     await createDeserts(restaurant.id, desertsCategoryId);
     await createJuices(restaurant.id, juicesCategoryId);
@@ -564,7 +564,7 @@ const createJapanese = async (
         data: product,
       });
 
-      console.log(`Created ${product.name}`);
+      // console.log(`Created ${product.name}`);
     }
   }
 };
@@ -637,7 +637,7 @@ const createBrazilian = async (
       data: item,
     });
 
-    console.log(`Created ${restaurant.name}`);
+    // console.log(`Created ${restaurant.name}`);
 
     await createDeserts(restaurant.id, desertsCategoryId);
     await createJuices(restaurant.id, juicesCategoryId);
@@ -758,7 +758,7 @@ const createBrazilian = async (
         data: product,
       });
 
-      console.log(`Created ${product.name}`);
+      // console.log(`Created ${product.name}`);
     }
   }
 };
@@ -893,7 +893,7 @@ const createDeserts = async (restaurantId: string, categoryId: string) => {
       data: product,
     });
 
-    console.log(`Created ${product.name}`);
+    // console.log(`Created ${product.name}`);
   }
 };
 
@@ -1027,7 +1027,7 @@ const createJuices = async (restaurantId: string, categoryId: string) => {
       data: product,
     });
 
-    console.log(`Created ${product.name}`);
+    // console.log(`Created ${product.name}`);
   }
 };
 
@@ -1056,7 +1056,7 @@ const main = async () => {
 
 main()
   .then(() => {
-    console.log("Seed do banco de dados realizado com sucesso!");
+    // console.log("Seed do banco de dados realizado com sucesso!");
   })
   .catch((error) => {
     console.error(error);
